@@ -129,8 +129,6 @@ angularFileUpload.directive('ngFileDrop', [ '$parse', '$http', function($parse, 
 		if ('draggable' in document.createElement('span')) {
 			var fn = $parse(attr['ngFileDrop']);
 			elem[0].addEventListener("dragover", function(evt) {
-				evt.stopPropagation();
-				evt.preventDefault();
 				elem.addClass(attr['ngFileDragOverClass'] || "dragover");
 			}, false);
 			elem[0].addEventListener("dragleave", function(evt) {
